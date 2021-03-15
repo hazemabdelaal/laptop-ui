@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+
+header {
+  width: 70%;
+  margin: auto;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 4rem;
+  width: 4rem;
+  margin: auto 1rem;
+}
+
+.logo-container h4 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #5f5f79;
+}
+
+nav {
+  flex: 2;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5f5f79;
+  font-size: 1.6rem;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  height: 3.03rem;
+  width: 3.03rem;
+}
+
+.cart {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* MAIN */
+
+main {
+  width: 70%;
+  height: 80vh;
+  margin: auto;
+}
+
+.presentation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.introduction {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #494964, #6f6f89);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.description {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #5f5f79;
+  margin: 2% 0 0 0;
+}
+
+.buy {
+  padding: 5rem 0 0 0;
+}
+
+.buy button {
+  border: 0.2rem solid #4a0601;
+  height: 4.5rem;
+  width: 14rem;
+  font-size: 2rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.size {
+  background-color: transparent;
+  color: #4a0601;
+}
+
+.add-to-cart {
+  background-color: #4a0601;
+  color: white;
+  margin: 2rem 0 0 3rem;
+  border: none;
+}
+
+.laptop {
+  flex: 1;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laptop img {
+  height: 100%;
+  -webkit-filter: drop-shadow(0px 0.5rem 0.3rem black);
+  filter: drop-shadow(0px 0.5rem 0.3rem black);
+  -webkit-animation: drop 1.5s ease;
+  animation: drop 1.5s ease;
+}
+
+.big-circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.medium-circle {
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.small-circle {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  z-index: -1;
+}
+
+/* ARROW */
+
+.arrows {
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 20%;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-8rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-8rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .presentation {
+    flex-direction: column;
+    margin: auto;
+  }
+  .introduction {
+    margin-top: 5vh;
+    text-align: center;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .description {
+    font-size: 1.8rem;
+  }
+  .buy {
+    padding: 10px 0px 0px 0px;
+    margin: auto;
+  }
+  .arrows {
+    bottom: 5%;
+    right: 50%;
+    width: 50%;
+    transform: translate(50%, 5%);
+  }
+  .laptop img {
+    height: 80%;
+    width: 80%;
+  }
+  .small-circle,
+  .medium-circle,
+  .big-circle {
+    opacity: 0.2;
+  }
+}
+
+@media screen and (max-width: 646px) {
+  .buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+  }
+
+  .size {
+    margin: 1rem auto;
+  }
+
+  .add-to-cart {
+    margin: 1rem auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    transform: translateY(100%);
+    display: none;
+    background-color: #5f5f79;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-link {
+    color: white;
+  }
+
+  .nav-links li {
+    padding: 0.5% 0;
+  }
+
+  .menu-container {
+    display: block;
+    cursor: pointer;
+  }
+
+  .presentation {
+    margin: 10% 0 0 0;
+  }
+
+  .arrows {
+    width: 50%;
+  }
+}
