@@ -213,7 +213,7 @@ main {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1275px) {
   .presentation {
     flex-direction: column;
     margin: auto;
